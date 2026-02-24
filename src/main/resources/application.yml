@@ -27,20 +27,20 @@ spring:
             api:
                 key: ${OPEN_AI_KEY}
                 url: ${OPEN_AI_URL}
-
-jwt:
-    secret: jwt-secret-key-gh719719-1234567890
-    # # redis
-    # 도커, 이미지 생성 # docker run -d --name redis-container -p 6379:6379 redis:7.2
-    # 도커 접속? # docker exec -it redis-container redis-cli
-    # docker run -d --name redisㅊㅋ-insight -p 8001:8001 redis/redisinsight:latest
-    # Host: redis 또는 host.docker.internal , port: 6379
     data:
         redis:
             host: localhost
-            port: 6379
+            port: 6380
             password: 
             timeout: 6000ms
+jwt:
+    secret: jwt-secret-key-gh719719-1234567890
+        # # redis
+        # 도커, 이미지 생성 # docker run -d --name redis-container -p 6379:6379 redis:7.2
+        # 도커 접속? # docker exec -it redis-container redis-cli
+        # docker run -d --name redis-insight -p 8001:8001 redis/redisinsight:latest
+        # Host: redis 또는 host.docker.internal , port: 6379
+    
 
 openApi:
     serviceKey: ${SERVICE_KEY}

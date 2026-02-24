@@ -54,8 +54,8 @@ public class SecurityConfig {
             .cors(Customizer.withDefaults())
             .authorizeHttpRequests(auth -> auth
             .requestMatchers(
-                "/users/join",
-                "/users/login",
+                "/users/signUp",
+                "/users/signIn",
                 "/openai/**",
                 "/forecast/**").permitAll()
             .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
